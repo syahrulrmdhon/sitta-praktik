@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Stok Bahan Ajar</title>
+    <link rel="stylesheet" href="css/stock.css">
+</head>
+
+<body>
+    <div class="content-container">
+        <header class="page-header">
+            <h1>Informasi Stok Bahan Ajar</h1>
+            <button id="add-stock" class="add-stock-btn">Tambah Stok Baru</button>
+        </header>
+
+        <div id="stock-list" class="stock-list">
+            <!-- Dynamically generated stock cards will go here -->
+        </div>
+    </div>
+
+    <!-- Modal for adding new stock -->
+    <div id="add-stock-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Tambah Stok Baru</h3>
+            <form id="add-stock-form">
+                <input type="text" id="kode-lokasi" placeholder="Kode Lokasi" required>
+                <input type="text" id="kode-barang" placeholder="Kode Barang" required>
+                <input type="text" id="nama-barang" placeholder="Nama Barang" required>
+                <input type="text" id="jenis-barang" placeholder="Jenis Barang" required>
+                <input type="number" id="stok" placeholder="Stok" required>
+                <input type="text" id="cover" placeholder="URL Cover Buku" required>
+                <button type="submit">Tambah Stok</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/stock.js"></script>
+</body>
+
+</html>

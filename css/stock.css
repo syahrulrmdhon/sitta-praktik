@@ -1,0 +1,189 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Content container for stock information */
+.content-container {
+    background-color: white;
+    width: 80%;
+    max-width: 1200px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header Section */
+.page-header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-header h1 {
+    color: #1e40af;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.page-header img {
+    width: 40px;
+    /* SITTA Logo size */
+    margin-right: 10px;
+}
+
+.add-stock-btn {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-stock-btn:hover {
+    background-color: #1e3a8a;
+}
+
+/* Grid layout for displaying stock cards */
+.stock-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual Stock Card */
+.stock-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.stock-card:hover {
+    transform: translateY(-5px);
+}
+
+.stock-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.stock-card h3 {
+    font-size: 1.2rem;
+    color: #1e40af;
+    margin-bottom: 5px;
+}
+
+.stock-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Background overlay */
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10% auto;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h3 {
+    color: #1e40af;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.modal input,
+.modal button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.modal input[type="text"] {
+    background-color: #f9f9f9;
+}
+
+.modal button {
+    background-color: #1d4ed8;
+    color: white;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #1e3a8a;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content-container {
+        width: 90%;
+    }
+
+    .stock-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

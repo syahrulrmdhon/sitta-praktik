@@ -1,25 +1,3 @@
-// Fungsi untuk menampilkan modal
-function showModal(modalId) {
-  document.getElementById(modalId).style.display = "block";
-}
-
-// Fungsi untuk menutup modal
-function closeModal(modalId) {
-  document.getElementById(modalId).style.display = "none";
-}
-
-// Fungsi untuk reset password
-function resetPassword() {
-  const resetEmail = document.getElementById("reset-email").value;
-  alert(`Link reset password dikirim ke ${resetEmail}`);
-  closeModal('forgot-password-modal');
-}
-
-// Fungsi untuk proses registrasi akun baru
-function registerAccount() {
-  alert("Akun baru berhasil dibuat!");
-  closeModal('register-modal');
-}
 
 var dataPengguna = [
   {
@@ -63,6 +41,29 @@ var dataPengguna = [
     lokasi: "Pusat"
   }
 ];
+
+// Fungsi untuk menampilkan modal
+function showModal(modalId) {
+  document.getElementById(modalId).style.display = "block";
+}
+
+// Fungsi untuk menutup modal
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
+
+// Fungsi untuk reset password
+function resetPassword() {
+  const resetEmail = document.getElementById("reset-email").value;
+  alert(`Link reset password dikirim ke ${resetEmail}`);
+  closeModal('forgot-password-modal');
+}
+
+// Fungsi untuk proses registrasi akun baru
+function registerAccount() {
+  alert("Akun baru berhasil dibuat!");
+  closeModal('register-modal');
+}
 
 // Fungsi untuk menampilkan alert
 function showAlert(message) {
