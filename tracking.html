@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - SITTA UT</title>
+    <link rel="stylesheet" href="css/tracking.css">
+</head>
+
+<body class="tracking-page">
+
+    <div class="tracking-wrapper">
+        <div class="tracking-card">
+            <div class="tracking-header">
+                <h1>Tracking Pengiriman</h1>
+                <p>Masukkan nomor Delivery Order untuk melacak status pengiriman bahan ajar.</p>
+            </div>
+
+            <div class="tracking-form">
+                <label for="tracking-id">No. DO/Billing</label>
+                <div class="tracking-form-row">
+                    <input type="text" id="tracking-id" placeholder="Contoh: 2023001234">
+                    <button type="button" id="track-btn">Cari</button>
+                </div>
+                <div id="tracking-alert" class="tracking-alert"></div>
+            </div>
+
+            <div id="tracking-result" class="tracking-result" style="display: none;">
+                <!-- Kartu ringkasan -->
+                <div class="shipment-card">
+                    <div class="shipment-card-top">
+                        <div>
+                            <div class="shipment-label">Nama Mahasiswa</div>
+                            <h2 id="tracking-name">-</h2>
+                        </div>
+                        <div class="shipment-status">
+                            <span id="tracking-status-badge" class="status-badge">-</span>
+                        </div>
+                    </div>
+
+                    <div class="shipment-info-grid">
+                        <div class="info-box">
+                            <span class="info-title">Nomor DO</span>
+                            <strong id="tracking-no">-</strong>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-title">Ekspedisi</span>
+                            <strong id="tracking-ekspedisi">-</strong>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-title">Tanggal Kirim</span>
+                            <strong id="tracking-tanggal-kirim">-</strong>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-title">Jenis Paket</span>
+                            <strong id="tracking-jenis-paket">-</strong>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-title">Total Pembayaran</span>
+                            <strong id="tracking-total">-</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="timeline-section">
+                    <h3>Perjalanan Paket</h3>
+                    <div id="timeline-list" class="timeline-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/tracking.js"></script>
+</body>
+
+</html>

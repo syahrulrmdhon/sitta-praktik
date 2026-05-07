@@ -6,62 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - SITTA UT</title>
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="left-side" id="sidebar">
-            <div class="sidebar-header">
-                <div class="logo-container">
-                    <img src="img/logo-sitta-ut.png" alt="SITTA UT Logo">
+    <!-- Top Bar Mobile -->
+    <header class="mobile-topbar">
+        <div class="mobile-topbar-inner">
+            <div class="mobile-logo-box">
+                <img src="img/logo-sitta-ut.png" alt="Logo SITTA UT">
+            </div>
+            <button id="toggle-sidebar" class="mobile-menu-btn" type="button" aria-label="Buka menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Overlay Mobile -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header desktop-only">
+                <div class="logo-box">
+                    <img src="img/logo-sitta-ut.png" alt="Logo SITTA UT">
                 </div>
-                <button id="toggle-sidebar" class="toggle-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
             </div>
-            <div class="greeting">
-                <h2 id="greeting-message"></h2>
+
+            <div class="sidebar-greeting">
+                <h2 id="greeting-message">Selamat Datang</h2>
+                <p>Silakan pilih menu yang tersedia.</p>
             </div>
+
             <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="#"><i class="fas fa-book-open"></i> Informasi Bahan Ajar</a></li>
-                    <li><a href="#"><i class="fas fa-truck"></i> Tracking Pengiriman</a></li>
-                    <li class="has-submenu">
-                        <a href="#" class="menu-item">
-                            <i class="fas fa-chart-line"></i> Laporan <i class="fas fa-caret-down"></i>
+                    <li>
+                        <a href="stock.html">
+                            <span class="menu-icon"><i class="fas fa-book-open"></i></span>
+                            <span class="menu-text">Informasi Bahan Ajar</span>
                         </a>
+                    </li>
+
+                    <li>
+                        <a href="tracking.html">
+                            <span class="menu-icon"><i class="fas fa-truck"></i></span>
+                            <span class="menu-text">Tracking Pengiriman</span>
+                        </a>
+                    </li>
+
+                    <li class="has-submenu" id="laporan-menu">
+                        <a href="#" class="menu-link">
+                            <span class="menu-left">
+                                <span class="menu-icon"><i class="fas fa-chart-line"></i></span>
+                                <span class="menu-text">Laporan</span>
+                            </span>
+                            <span class="menu-caret"><i class="fas fa-caret-down"></i></span>
+                        </a>
+
                         <ul class="submenu">
-                            <li><a href="#"><i class="fas fa-tasks"></i> Monitoring Progress DO Bahan Ajar</a></li>
-                            <li><a href="#"><i class="fas fa-table"></i> Rekap Bahan Ajar</a></li>
+                            <li>
+                                <a href="#">
+                                    <span class="menu-icon"><i class="fas fa-tasks"></i></span>
+                                    <span class="menu-text">Monitoring Progress DO Bahan Ajar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="menu-icon"><i class="fas fa-table"></i></span>
+                                    <span class="menu-text">Rekap Bahan Ajar</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fas fa-history"></i> Histori Transaksi Bahan Ajar</a></li>
+
+                    <li>
+                        <a href="#">
+                            <span class="menu-icon"><i class="fas fa-history"></i></span>
+                            <span class="menu-text">Histori Transaksi Bahan Ajar</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-        </div>
+        </aside>
 
-        <div class="right-side">
-            <div class="header">
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="page-header">
                 <h1>Selamat Datang di Dashboard</h1>
                 <p>Silakan pilih menu untuk melanjutkan.</p>
-            </div>
-            <div class="content">
-                <div class="card">
+            </section>
+
+            <section class="card-grid">
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
                     <h3>Monitoring Progress DO Bahan Ajar</h3>
-                    <p>A brief description of monitoring DO</p>
+                    <p>Memantau progres delivery order bahan ajar secara ringkas dan terstruktur.</p>
                 </div>
-                <div class="card">
+
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
                     <h3>Rekap Bahan Ajar</h3>
-                    <p>A brief description of Bahan Ajar recap</p>
+                    <p>Menampilkan rekap data bahan ajar untuk kebutuhan monitoring dan evaluasi.</p>
                 </div>
-                <div class="card">
+
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
                     <h3>Histori Transaksi</h3>
-                    <p>A brief description of transaction history</p>
+                    <p>Melihat riwayat transaksi bahan ajar yang pernah dilakukan sebelumnya.</p>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
     </div>
+
     <script src="js/dashboard.js"></script>
 </body>
 
