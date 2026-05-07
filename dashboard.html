@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - SITTA UT</title>
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
-    <!-- Main Container -->
     <div class="main-container">
-        <!-- Left Side - Sidebar Menu -->
         <div class="left-side" id="sidebar">
             <div class="sidebar-header">
                 <div class="logo-container">
@@ -27,8 +27,11 @@
                 <ul>
                     <li><a href="#"><i class="fas fa-book-open"></i> Informasi Bahan Ajar</a></li>
                     <li><a href="#"><i class="fas fa-truck"></i> Tracking Pengiriman</a></li>
-                    <li><a href="#"><i class="fas fa-chart-line"></i> Laporan <i class="fas fa-caret-down"></i></a>
-                        <ul>
+                    <li class="has-submenu">
+                        <a href="#" class="menu-item">
+                            <i class="fas fa-chart-line"></i> Laporan <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="submenu">
                             <li><a href="#"><i class="fas fa-tasks"></i> Monitoring Progress DO Bahan Ajar</a></li>
                             <li><a href="#"><i class="fas fa-table"></i> Rekap Bahan Ajar</a></li>
                         </ul>
@@ -38,7 +41,6 @@
             </nav>
         </div>
 
-        <!-- Right Side - Dashboard Content -->
         <div class="right-side">
             <div class="header">
                 <h1>Selamat Datang di Dashboard</h1>
@@ -60,7 +62,7 @@
             </div>
         </div>
     </div>
-
-    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
+
 </html>

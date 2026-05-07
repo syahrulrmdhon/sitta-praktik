@@ -1,3 +1,26 @@
+// Fungsi untuk menampilkan modal
+function showModal(modalId) {
+  document.getElementById(modalId).style.display = "block";
+}
+
+// Fungsi untuk menutup modal
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
+
+// Fungsi untuk reset password
+function resetPassword() {
+  const resetEmail = document.getElementById("reset-email").value;
+  alert(`Link reset password dikirim ke ${resetEmail}`);
+  closeModal('forgot-password-modal');
+}
+
+// Fungsi untuk proses registrasi akun baru
+function registerAccount() {
+  alert("Akun baru berhasil dibuat!");
+  closeModal('register-modal');
+}
+
 var dataPengguna = [
   {
     id: 1,
@@ -41,132 +64,7 @@ var dataPengguna = [
   }
 ];
 
-var dataBahanAjar = [
-  {
-    kodeLokasi: "0TMP01",
-    kodeBarang: "ASIP4301",
-    namaBarang: "Pengantar Ilmu Komunikasi",
-    jenisBarang: "BMP",
-    edisi: "2",
-    stok: 548,
-    cover: "img/pengantar_komunikasi.jpg"
-  },
-  {
-    kodeLokasi: "0JKT01",
-    kodeBarang: "EKMA4216",
-    namaBarang: "Manajemen Keuangan",
-    jenisBarang: "BMP",
-    edisi: "3",
-    stok: 392,
-    cover: "img/manajemen_keuangan.jpg"
-  },
-  {
-    kodeLokasi: "0SBY02",
-    kodeBarang: "EKMA4310",
-    namaBarang: "Kepemimpinan",
-    jenisBarang: "BMP",
-    edisi: "1",
-    stok: 278,
-    cover: "img/kepemimpinan.jpg"
-  },
-  {
-    kodeLokasi: "0MLG01",
-    kodeBarang: "BIOL4211",
-    namaBarang: "Mikrobiologi Dasar",
-    jenisBarang: "BMP",
-    edisi: "2",
-    stok: 165,
-    cover: "img/mikrobiologi.jpg"
-  },
-  {
-    kodeLokasi: "0UPBJJBDG",
-    kodeBarang: "PAUD4401",
-    namaBarang: "Perkembangan Anak Usia Dini",
-    jenisBarang: "BMP",
-    edisi: "4",
-    stok: 204,
-    cover: "img/paud_perkembangan.jpg"
-  }
-];
-
-var dataTracking = {
-  "2023001234": {
-    nomorDO: "2023001234",
-    nama: "Rina Wulandari",
-    status: "Dalam Perjalanan",
-    ekspedisi: "JNE",
-    tanggalKirim: "2025-08-25",
-    paket: "0JKT01",
-    total: "Rp 180.000",
-    perjalanan: [
-      {
-        waktu: "2025-08-25 10:12:20",
-        keterangan: "Penerimaan di Loket: TANGERANG SELATAN. Pengirim: Universitas Terbuka"
-      },
-      {
-        waktu: "2025-08-25 14:07:56",
-        keterangan: "Tiba di Hub: TANGERANG SELATAN"
-      },
-      {
-        waktu: "2025-08-25 10:12:20",
-        keterangan: "Diteruskan ke Kantor Jakarta Selatan"
-      },
-    ]
-  },
-  "2023005678": {
-    nomorDO: "2023001234",
-    nama: "Agus Pranoto",
-    status: "Dikirim",
-    ekspedisi: "Pos Indonesia",
-    tanggalKirim: "2025-08-25",
-    paket: "0UPBJJBDG",
-    total: "Rp 220.000",
-    perjalanan: [
-      {
-        waktu: "2025-08-25 10:12:20",
-        keterangan: "Penerimaan di Loket: TANGERANG SELATAN. Pengirim: Universitas Terbuka"
-      },
-      {
-        waktu: "2025-08-25 14:07:56",
-        keterangan: "Tiba di Hub: TANGERANG SELATAN"
-      },
-      {
-        waktu: "2025-08-25 16:30:10",
-        keterangan: "Diteruskan ke Kantor Kota Bandung"
-      },
-      {
-        waktu: "2025-08-26 12:15:33",
-        keterangan: "Tiba di Hub: Kota BANDUNG"
-      },
-      {
-        waktu: "2025-08-26 15:06:12",
-        keterangan: "Proses antar ke Cimahi"
-      },
-      {
-        waktu: "2025-08-26 20:00:00",
-        keterangan: "Selesai Antar. Penerima: Agus Pranoto"
-      }
-    ]
-  }
-};
-
-// Handle login
-document.getElementById("login-form").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const user = dataPengguna.find(u => u.email === email && u.password === password);
-
-  if (user) {
-    alert("Login Successful!");
-    window.location.href = "dashboard.html"; // Redirect to dashboard after login
-  } else {
-    showAlert("Email/password yang Anda masukkan salah.");
-  }
-});
-
-// Display alert
+// Fungsi untuk menampilkan alert
 function showAlert(message) {
   const alertBox = document.getElementById("login-alert");
   const alertMessage = document.getElementById("alert-message");
@@ -174,57 +72,24 @@ function showAlert(message) {
   alertBox.style.display = "block";
 }
 
-// Show modal
-function showModal(modalId) {
-  document.getElementById(modalId).style.display = "block";
-}
-
-// Close modal
-function closeModal(modalId) {
-  document.getElementById(modalId).style.display = "none";
-}
-
-// Reset password logic
-function resetPassword() {
-  const resetEmail = document.getElementById("reset-email").value;
-  alert(`Link reset password dikirim ke ${resetEmail}`);
-  closeModal('forgot-password-modal');
-}
-
-// Register new account logic
-function registerAccount() {
-  alert("Akun baru berhasil dibuat!");
-  closeModal('register-modal');
-}
-
 window.addEventListener('DOMContentLoaded', function () {
-  // Sidebar toggle functionality
-  const sidebar = document.getElementById("sidebar");
-  const toggleBtn = document.getElementById("toggle-sidebar");
+  // Handle login
+  const loginForm = document.getElementById("login-form");
 
-  toggleBtn.addEventListener("click", function () {
-    if (sidebar.style.width === "60px") {
-      sidebar.style.width = "250px"; // Expanded sidebar
-    } else {
-      sidebar.style.width = "60px"; // Collapsed sidebar
-    }
-  });
+  if (loginForm) {
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-  // Update greeting based on time of day
-  const greetingMessage = document.getElementById('greeting-message');
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const user = dataPengguna.find(u => u.email === email && u.password === password);
 
-  const hours = new Date().getHours();
-  let greeting = "";
-
-  if (hours >= 6 && hours < 12) {
-    greeting = "Selamat Pagi";
-  } else if (hours >= 12 && hours < 18) {
-    greeting = "Selamat Siang";
-  } else if (hours >= 18 && hours < 24) {
-    greeting = "Selamat Sore";
-  } else {
-    greeting = "Selamat Malam";
+      if (user) {
+        alert("Login Successful!");
+        window.location.href = "dashboard.html"; // Redirect to dashboard after login
+      } else {
+        showAlert("Email/password yang Anda masukkan salah.");
+      }
+    });
   }
-
-  greetingMessage.textContent = greeting;
 });

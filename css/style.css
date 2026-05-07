@@ -44,7 +44,8 @@ body {
 
 /* Right Side - Blue background with form */
 .right-side {
-    background-color: #1e40af; /* Blue color */
+    background-color: #1e40af;
+    /* Blue color */
     color: white;
     padding: 30px;
     display: flex;
@@ -65,7 +66,9 @@ h2 {
     font-size: 16px;
 }
 
-input[type="email"], input[type="password"], input[type="text"] {
+input[type="email"],
+input[type="password"],
+input[type="text"] {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -79,7 +82,8 @@ button {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    background-color: #1d4ed8; /* Darker blue */
+    background-color: #1d4ed8;
+    /* Darker blue */
     border: none;
     border-radius: 6px;
     color: white;
@@ -130,7 +134,8 @@ button:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Background overlay */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Background overlay */
     overflow: auto;
 }
 
@@ -140,7 +145,8 @@ button:hover {
     border-radius: 8px;
     margin: 15% auto;
     width: 100%;
-    max-width: 400px; /* Same width as login form */
+    max-width: 400px;
+    /* Same width as login form */
     text-align: center;
 }
 
@@ -165,10 +171,12 @@ button:hover {
     .main-container {
         flex-direction: column;
     }
+
     .left-side {
         padding: 10px;
         text-align: center;
     }
+
     .right-side {
         padding: 20px;
     }
