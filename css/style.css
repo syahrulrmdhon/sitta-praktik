@@ -1,0 +1,175 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main container: Flex layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Layout - Left side and Right side */
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Left Side - White background with logo and text */
+.left-side {
+    background-color: #ffffff;
+    color: #1e40af;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 80%;
+    max-width: 80%;
+}
+
+/* Right Side - Blue background with form */
+.right-side {
+    background-color: #1e40af; /* Blue color */
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.description {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #1d4ed8; /* Darker blue */
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e3a8a;
+}
+
+.additional-links {
+    margin-top: 15px;
+}
+
+.additional-links button {
+    background: none;
+    color: white;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.additional-links button:hover {
+    color: #1d4ed8;
+}
+
+/* Styling for the alert box (now below the form) */
+.alert {
+    display: none;
+    background-color: #f44336;
+    color: white;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Background overlay */
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15% auto;
+    width: 100%;
+    max-width: 400px; /* Same width as login form */
+    text-align: center;
+}
+
+.modal .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .left-side {
+        padding: 10px;
+        text-align: center;
+    }
+    .right-side {
+        padding: 20px;
+    }
+}

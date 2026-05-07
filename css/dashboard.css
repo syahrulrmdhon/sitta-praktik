@@ -1,0 +1,207 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    font-size: 1rem;
+    /* Default body font size */
+}
+
+/* Main Container - Flexbox Layout */
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Left Side - Sidebar Styling */
+.left-side {
+    background-color: #002A76;
+    /* Dark gray background */
+    color: white;
+    max-width: 20vw;
+    padding: 20px;
+    /* Adjust padding for balance */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    text-align: left;
+    transition: width 0.3s ease;
+    height: 100vh;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    /* Adjusted for consistency */
+}
+
+.logo-container {
+    background-color: white;
+    /* White background for logo */
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.logo-container img {
+    width: 120px;
+    /* Adjust logo size */
+}
+
+/* Toggle Button */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    /* Medium size for toggle button */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Greeting */
+.greeting h2 {
+    font-size: 1.5rem;
+    /* Adjusted size for greeting */
+    font-weight: 600;
+    /* Slightly bold */
+    margin-bottom: 15px;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav ul li {
+    margin: 15px 0;
+    /* Adjusted spacing */
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    /* Standard size for links */
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-nav ul li a i {
+    margin-right: 12px;
+    font-size: 1.3rem;
+    /* Slightly smaller icon */
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: #495057;
+    /* Darker gray on hover */
+}
+
+/* Right Side - Dashboard Content */
+.right-side {
+    flex: 2;
+    padding: 30px;
+    color: #343a40;
+    /* Dark text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2rem;
+    /* Large heading */
+    font-weight: 600;
+    color: #1e40af;
+    /* Blue */
+    margin-bottom: 15px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    /* Slightly bigger for readability */
+    color: #555;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    /* Medium size for card titles */
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    font-size: 1rem;
+    /* Standard size for card content */
+}
+
+/* Media Queries for Sidebar Toggle */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .left-side {
+        padding: 15px;
+        text-align: center;
+        width: 60px;
+        /* Sidebar width when collapsed */
+    }
+
+    .right-side {
+        padding: 15px;
+    }
+
+    .sidebar-nav ul li a {
+        font-size: 1rem;
+    }
+}

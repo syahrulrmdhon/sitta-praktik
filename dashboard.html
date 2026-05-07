@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SITTA UT</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome Icons -->
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Side - Sidebar Menu -->
+        <div class="left-side" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <img src="img/logo-sitta-ut.png" alt="SITTA UT Logo">
+                </div>
+                <button id="toggle-sidebar" class="toggle-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="greeting">
+                <h2 id="greeting-message"></h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-book-open"></i> Informasi Bahan Ajar</a></li>
+                    <li><a href="#"><i class="fas fa-truck"></i> Tracking Pengiriman</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Laporan <i class="fas fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-tasks"></i> Monitoring Progress DO Bahan Ajar</a></li>
+                            <li><a href="#"><i class="fas fa-table"></i> Rekap Bahan Ajar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-history"></i> Histori Transaksi Bahan Ajar</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Right Side - Dashboard Content -->
+        <div class="right-side">
+            <div class="header">
+                <h1>Selamat Datang di Dashboard</h1>
+                <p>Silakan pilih menu untuk melanjutkan.</p>
+            </div>
+            <div class="content">
+                <div class="card">
+                    <h3>Monitoring Progress DO Bahan Ajar</h3>
+                    <p>A brief description of monitoring DO</p>
+                </div>
+                <div class="card">
+                    <h3>Rekap Bahan Ajar</h3>
+                    <p>A brief description of Bahan Ajar recap</p>
+                </div>
+                <div class="card">
+                    <h3>Histori Transaksi</h3>
+                    <p>A brief description of transaction history</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+</body>
+</html>
